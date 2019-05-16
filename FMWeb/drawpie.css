@@ -1,0 +1,122 @@
+﻿
+.it-ec-dialog {
+}
+
+.it-ec-textdiv {
+    position: absolute;
+    top: 150px;
+    left: 5px;
+    right: 230px;
+}
+
+.it-ec-statsdiv {
+    position: absolute;
+    top: 150px;
+    right: 5px;
+    width: 220px;
+    height: 300px;
+    background-color: pink;
+}
+
+.it-ec-paragraph {
+    text-align: justify;
+    border: 1px solid;
+    margin: 0px;
+    padding: 5px;
+    border-color: #663;
+    background-color: #dcdcdc;
+}
+
+.it-ec-document {
+    position: absolute;
+    top: 5px;
+    height: 20px;
+    left: 5px;
+    right: 5px;
+}
+
+.it-ec-extract {
+    position: absolute;
+    height: 100%;
+}
+/* The settings for the classes used by the CSS only bar chart created by     */
+/* Utilities.createBarChart. They are still in need of some adjustment -      */
+/* hence the various commented out lines.                                     */
+
+.it-chart-dl {
+    background-color: yellow;
+}
+
+.it-chart-dt {
+    float: left;
+    width: 10%;
+    text-align: right;
+    padding: 5px 0px 5px 0px;
+    clear: left;
+}
+
+.it-chart-dd {
+    float: left;
+    width: 80%;
+    margin-left: 5px;
+    padding: 5px 0px 5px 0px;
+}
+
+.it-chart-bar {
+    height: 20px;
+    float: left;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.it-chart-label {
+    width: 10%;
+    height: 100%;
+    float: left;
+    text-align: right;
+}
+
+/*文本高亮*/
+.KW.highlight {
+    background-color: pink;
+}
+
+.C2.highlight {
+    background-color: red;
+    color: white;
+}
+
+.C1.highlight {
+    background-color: orange;
+    color: white;
+}
+
+.B2.highlight {
+    background-color: yellow;
+    color: black;
+}
+
+.B1.highlight {
+    background-color: green;
+    color: white;
+}
+
+.A2.highlight {
+    background-color: blue;
+    color: white;
+}
+
+.A1.highlight {
+    background-color: indigo;
+    color: white;
+}
+
+.UN.highlight {
+    background-color: grey;
+    color: white;
+}
+
+span.MW {
+    font-weight: bold;
+}
