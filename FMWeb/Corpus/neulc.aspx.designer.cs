@@ -40,13 +40,13 @@ namespace FMWeb.Corpus {
         protected global::System.Web.UI.WebControls.View vwQuery;
         
         /// <summary>
-        /// cblGrade 控件。
+        /// cblLevel 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList cblGrade;
+        protected global::System.Web.UI.WebControls.CheckBoxList cblLevel;
         
         /// <summary>
         /// cblGenre 控件。
@@ -67,22 +67,58 @@ namespace FMWeb.Corpus {
         protected global::System.Web.UI.WebControls.CheckBoxList cblTopic;
         
         /// <summary>
-        /// btnSubmit 控件。
+        /// btnSubmitforCorpus 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSubmit;
+        protected global::System.Web.UI.WebControls.Button btnSubmitforCorpus;
         
         /// <summary>
-        /// btnReset 控件。
+        /// btnResetforCorpus 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnReset;
+        protected global::System.Web.UI.WebControls.Button btnResetforCorpus;
+        
+        /// <summary>
+        /// divforCorpusResult 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divforCorpusResult;
+        
+        /// <summary>
+        /// tbforLevel 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Table tbforLevel;
+        
+        /// <summary>
+        /// tbforTopic 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Table tbforTopic;
+        
+        /// <summary>
+        /// tbforGenre 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Table tbforGenre;
         
         /// <summary>
         /// vwConcordance 控件。
@@ -94,6 +130,24 @@ namespace FMWeb.Corpus {
         protected global::System.Web.UI.WebControls.View vwConcordance;
         
         /// <summary>
+        /// divConcordanceQuery 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divConcordanceQuery;
+        
+        /// <summary>
+        /// divConcordanceResult 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divConcordanceResult;
+        
+        /// <summary>
         /// vwCollocate 控件。
         /// </summary>
         /// <remarks>
@@ -101,6 +155,24 @@ namespace FMWeb.Corpus {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.View vwCollocate;
+        
+        /// <summary>
+        /// divCollocateQuery 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divCollocateQuery;
+        
+        /// <summary>
+        /// divCollocateResult 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divCollocateResult;
         
         /// <summary>
         /// vwWordList 控件。
@@ -112,15 +184,6 @@ namespace FMWeb.Corpus {
         protected global::System.Web.UI.WebControls.View vwWordList;
         
         /// <summary>
-        /// inputDiv 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl inputDiv;
-        
-        /// <summary>
         /// rbltxtFrom 控件。
         /// </summary>
         /// <remarks>
@@ -128,6 +191,51 @@ namespace FMWeb.Corpus {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList rbltxtFrom;
+        
+        /// <summary>
+        /// hdftxtFrom 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hdftxtFrom;
+        
+        /// <summary>
+        /// divfromshuru 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divfromshuru;
+        
+        /// <summary>
+        /// txt_Title 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txt_Title;
+        
+        /// <summary>
+        /// txt_Author 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txt_Author;
+        
+        /// <summary>
+        /// ddlTopics 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlTopics;
         
         /// <summary>
         /// divFromCorpus 控件。
@@ -157,40 +265,31 @@ namespace FMWeb.Corpus {
         protected global::System.Web.UI.WebControls.Button btnQueryforWordlist;
         
         /// <summary>
-        /// divfromshuru 控件。
+        /// divCorpusforWordList 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divfromshuru;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divCorpusforWordList;
         
         /// <summary>
-        /// homecity_name 控件。
+        /// btnLemmaAll 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText homecity_name;
+        protected global::System.Web.UI.WebControls.Button btnLemmaAll;
         
         /// <summary>
-        /// username 控件。
+        /// gvCorpusforWordList 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText username;
-        
-        /// <summary>
-        /// rbVBS 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rbVBS;
+        protected global::System.Web.UI.WebControls.GridView gvCorpusforWordList;
         
         /// <summary>
         /// divTexts 控件。
@@ -211,6 +310,15 @@ namespace FMWeb.Corpus {
         protected global::System.Web.UI.HtmlControls.HtmlTextArea txtcontent;
         
         /// <summary>
+        /// rbVBS 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList rbVBS;
+        
+        /// <summary>
         /// clearBtn 控件。
         /// </summary>
         /// <remarks>
@@ -229,13 +337,13 @@ namespace FMWeb.Corpus {
         protected global::System.Web.UI.WebControls.Button lemmanew;
         
         /// <summary>
-        /// outputDiv 控件。
+        /// divOutput 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl outputDiv;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divOutput;
         
         /// <summary>
         /// divContext 控件。

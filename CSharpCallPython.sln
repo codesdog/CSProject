@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PythonWeb", "PythonWeb\Pyth
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FMWeb", "FMWeb\FMWeb.csproj", "{B441AB53-C227-4DAC-AF8E-0BC2748F0B3E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfficeToPDF", "OfficeToPDF\OfficeToPDF.csproj", "{023DEF9A-CDAD-47ED-B657-6F305EB54867}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{B441AB53-C227-4DAC-AF8E-0BC2748F0B3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B441AB53-C227-4DAC-AF8E-0BC2748F0B3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B441AB53-C227-4DAC-AF8E-0BC2748F0B3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{023DEF9A-CDAD-47ED-B657-6F305EB54867}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{023DEF9A-CDAD-47ED-B657-6F305EB54867}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{023DEF9A-CDAD-47ED-B657-6F305EB54867}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{023DEF9A-CDAD-47ED-B657-6F305EB54867}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
