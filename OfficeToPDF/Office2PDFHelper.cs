@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Office.Interop;
-using Microsoft.Office.Interop.Word;
-using Microsoft.Office.Interop.Excel;
-using Microsoft.Office.Interop.PowerPoint;
+
 using Microsoft.Office.Core;
 
 namespace OfficeToPDF
@@ -34,24 +27,24 @@ namespace OfficeToPDF
             //    string targetPath = "G:\\工作\\ceshi\\ceshi.pdf";
             //    sourcePath = "G:\\工作\\OfficePreview\\Preview\\SourceFile\\测试.doc"; 
             bool result = false;
-            WdExportFormat exportFormat = WdExportFormat.wdExportFormatPDF;
+            Microsoft.Office.Interop.Word.WdExportFormat exportFormat = Microsoft.Office.Interop.Word.WdExportFormat.wdExportFormatPDF;
             object paramMissing = Type.Missing;
             Microsoft.Office.Interop.Word.ApplicationClass wordApplication = new Microsoft.Office.Interop.Word.ApplicationClass();
-            _Document wordDocument = null;
+            Microsoft.Office.Interop.Word._Document wordDocument = null;
             try
             {
                 object paramSourceDocPath = sourcePath;
                 string paramExportFilePath = targetPath;
                 Microsoft.Office.Interop.Word.WdExportFormat paramExportFormat = exportFormat;
                 bool paramOpenAfterExport = false;
-                WdExportOptimizeFor paramExportOptimizeFor = WdExportOptimizeFor.wdExportOptimizeForPrint;
-                WdExportRange paramExportRange = WdExportRange.wdExportAllDocument;
+                Microsoft.Office.Interop.Word.WdExportOptimizeFor paramExportOptimizeFor = Microsoft.Office.Interop.Word.WdExportOptimizeFor.wdExportOptimizeForPrint;
+                Microsoft.Office.Interop.Word.WdExportRange paramExportRange = Microsoft.Office.Interop.Word.WdExportRange.wdExportAllDocument;
                 int paramStartPage = 0;
                 int paramEndPage = 0;
-                WdExportItem paramExportItem = WdExportItem.wdExportDocumentContent;
+                Microsoft.Office.Interop.Word.WdExportItem paramExportItem = Microsoft.Office.Interop.Word.WdExportItem.wdExportDocumentContent;
                 bool paramIncludeDocProps = true;
                 bool paramKeepIRM = true;
-                WdExportCreateBookmarks paramCreateBookmarks = WdExportCreateBookmarks.wdExportCreateWordBookmarks;
+                Microsoft.Office.Interop.Word.WdExportCreateBookmarks paramCreateBookmarks = Microsoft.Office.Interop.Word.WdExportCreateBookmarks.wdExportCreateWordBookmarks;
                 bool paramDocStructureTags = true;
                 bool paramBitmapMissingFonts = true;
                 bool paramUseISO19005_1 = false;
@@ -107,10 +100,10 @@ namespace OfficeToPDF
         public static bool XLSConvertToPDF(string sourcePath, string targetPath)
         {
             bool result = false;
-            XlFixedFormatType targetType = XlFixedFormatType.xlTypePDF;
+            Microsoft.Office.Interop.Excel.XlFixedFormatType targetType = Microsoft.Office.Interop.Excel.XlFixedFormatType.xlTypePDF;
             object missing = Type.Missing;
             Microsoft.Office.Interop.Excel.ApplicationClass application = null;
-            Workbook workBook = null;
+            Microsoft.Office.Interop.Excel.Workbook workBook = null;
             try
             {
                 application = new Microsoft.Office.Interop.Excel.ApplicationClass();
@@ -118,7 +111,7 @@ namespace OfficeToPDF
                 object type = targetType;
                 workBook = application.Workbooks.Open(sourcePath, missing, missing, missing, missing, missing,
                     missing, missing, missing, missing, missing, missing, missing, missing, missing);
-                workBook.ExportAsFixedFormat(targetType, target, XlFixedFormatQuality.xlQualityStandard, true, false, missing, missing, missing, missing);
+                workBook.ExportAsFixedFormat(targetType, target, Microsoft.Office.Interop.Excel.XlFixedFormatQuality.xlQualityStandard, true, false, missing, missing, missing, missing);
                 result = true;
             }
             catch
@@ -156,10 +149,10 @@ namespace OfficeToPDF
         public static bool PPTConvertToPDF(string sourcePath, string targetPath)
         {
             bool result;
-            PpSaveAsFileType targetFileType = PpSaveAsFileType.ppSaveAsPDF;
+            Microsoft.Office.Interop.PowerPoint.PpSaveAsFileType targetFileType = Microsoft.Office.Interop.PowerPoint.PpSaveAsFileType.ppSaveAsPDF;
             object missing = Type.Missing;
             Microsoft.Office.Interop.PowerPoint.ApplicationClass application = null;
-            Presentation persentation = null;
+            Microsoft.Office.Interop.PowerPoint.Presentation persentation = null;
             try
             {
                 application = new Microsoft.Office.Interop.PowerPoint.ApplicationClass();

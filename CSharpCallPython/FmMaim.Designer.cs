@@ -36,6 +36,8 @@
             this.dgvResult = new System.Windows.Forms.DataGridView();
             this.btnAnalysis = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.btnViewChart = new System.Windows.Forms.Button();
+            this.btnChart2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResult)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,11 +114,33 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // btnViewChart
+            // 
+            this.btnViewChart.Location = new System.Drawing.Point(687, 573);
+            this.btnViewChart.Name = "btnViewChart";
+            this.btnViewChart.Size = new System.Drawing.Size(75, 23);
+            this.btnViewChart.TabIndex = 7;
+            this.btnViewChart.Text = "查看Chart";
+            this.btnViewChart.UseVisualStyleBackColor = true;
+            this.btnViewChart.Click += new System.EventHandler(this.BtnViewChart_Click);
+            // 
+            // btnChart2
+            // 
+            this.btnChart2.Location = new System.Drawing.Point(606, 573);
+            this.btnChart2.Name = "btnChart2";
+            this.btnChart2.Size = new System.Drawing.Size(75, 23);
+            this.btnChart2.TabIndex = 8;
+            this.btnChart2.Text = "查看Chart2";
+            this.btnChart2.UseVisualStyleBackColor = true;
+            this.btnChart2.Click += new System.EventHandler(this.BtnChart2_Click);
+            // 
             // FmMaim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 608);
+            this.Controls.Add(this.btnChart2);
+            this.Controls.Add(this.btnViewChart);
             this.Controls.Add(this.btnAnalysis);
             this.Controls.Add(this.dgvResult);
             this.Controls.Add(this.btnSplit);
@@ -142,5 +166,7 @@
         private System.Windows.Forms.DataGridView dgvResult;
         private System.Windows.Forms.Button btnAnalysis;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button btnViewChart;
+        private System.Windows.Forms.Button btnChart2;
     }
 }

@@ -288,5 +288,17 @@ namespace CSharpCallPython
                 FindComValue(dt);
             }
         }
+
+        private void BtnViewChart_Click(object sender, EventArgs e)
+        {
+            fmChart fm1 = new fmChart();
+            fm1.Show();
+        }
+
+        private void BtnChart2_Click(object sender, EventArgs e)
+        {
+            fmChart2 fm1 = new fmChart2();
+            fm1.Show();
+        }
     }
 }

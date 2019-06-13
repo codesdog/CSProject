@@ -10,26 +10,109 @@
             margin:5px;
             text-align:left;
         }
-        .flexbox_a{
+        .flexbox_text{
+            width:40px;
+            height:20px;
+            text-align:center;
+        }
+        .flexbox_asub{
+            height:16px;
+            width:16px;
             text-align: center;
             color:black;
             text-decoration:none;
-            border:1px solid #B4CDCD;
+            border:1px solid #808080;
             background-color:#f0f0f0;
-            text-align:center;
-            height:20px;
-            width:30px;
-            padding:2px;
-            border-radius: 40%;
-            -moz-border-radius: 40%;
-            -webkit-border-radius: 40%;
+            border-radius: 50%;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            vertical-align:central;
+            padding-left:6px;
+            padding-right:6px;
+            padding-bottom:2px;
+            font-weight:bold;
         }
+        .flexbox_asub:visited {text-decoration:none;} 
+        .flexbox_asub:hover{
+            cursor:pointer;
+            text-decoration:none;
+            background-color:#808080;
+            color:#ffffff;
+        }
+        flexbox_asub:active {color:#ba2636;} 
+        .flexbox_a{
+            height:16px;
+            width:16px;
+            text-align: center;
+            color:black;
+            text-decoration:none;
+            border:1px solid #808080;
+            background-color:#f0f0f0;
+            border-radius: 50%;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            vertical-align:central;
+            padding-left:5px;
+            padding-right:5px;
+            padding-bottom:2px;
+            font-weight:bold;
+        }
+        .flexbox_a:visited {text-decoration:none;} 
         .flexbox_a:hover{
             cursor:pointer;
             text-decoration:none;
             background-color:#808080;
             color:#ffffff;
         }
+         .flexbox_a:visited{
+            text-decoration:none;
+        }
+        .qfld {
+			border: none;
+			line-height: 25px;
+		}
+
+		.qfld fieldset {
+			border: 1px solid #808080;
+			margin: 5px;
+			line-height: 30px;
+		}
+
+		.qfld fieldset legend {
+			text-align: left;
+			font-weight: bold;
+			font-size: 15px;
+		}
+
+		.cb td {
+			width: 160px;
+		}
+
+		.cb label {
+			height: 25px;
+			width: 160px;
+			display: inline-block;
+			vertical-align: middle;
+			margin-top: -4px;
+		}
+
+		.cb label:before {
+			display: inline-block;
+			background: #fff;
+			vertical-align: middle;
+			-webkit-transition: background ease-in .5s;
+			-o-transition: background ease-in .5s;
+			transition: background ease-in .5s;
+		}
+
+		.cb label:after {
+			display: inline-block;
+			background: rgb(54, 85, 5);
+			vertical-align: middle;
+			-webkit-transition: background ease-in .5s;
+			-o-transition: background ease-in .5s;
+			transition: background ease-in .5s;
+		}
     </style>
 
      <script type="text/javascript">
@@ -53,10 +136,11 @@
              txt.value = a;
          }
 		</script>
-<script type="text/javascript">
+    <script type="text/javascript">
     function checkAll() {
         for (var i = 0; i < document.getElementById("cblStatuteEnumTypeId").getElementsByTagName("input").length; i++) {
-            document.getElementById("cblStatuteEnumTypeId_" + i).checked = true;        }
+            document.getElementById("cblStatuteEnumTypeId_" + i).checked = true;
+        }
     }
 
     function deleteAll() {
@@ -127,54 +211,95 @@
         <%-- 导航内容 --%>
         <div id="divViews" class="divBlock">
             <asp:MultiView ID="mvNeulc" runat="server">
-                <%-- 检索 --%>
+              <%-- 检索 --%>
                 <asp:View ID="vwQuery" runat="server">
-                    <div class="qfld" style="font-size: 14px;">
-                        Select files you need according to:
-                    </div>
-                    <div class="qfld">
-                        <fieldset id="fdsLevel">
-                            <legend>Level
-                            </legend>
-                            <asp:CheckBoxList ID="cblLevel" runat="server" RepeatDirection="Horizontal"
-                                RepeatLayout="Flow" CssClass="cb" RepeatColumns="6">
-                                <asp:ListItem Value="1">L1(freshmen)</asp:ListItem>
-                                <asp:ListItem Value="2">L2(sophomores)</asp:ListItem>
-                                <asp:ListItem Value="3">L3(juniors)</asp:ListItem>
-                                <asp:ListItem Value="4">L4(seniors)</asp:ListItem>
-                            </asp:CheckBoxList>
-                        </fieldset>
-                        <fieldset>
-                            <legend>Genre</legend>
-                            <asp:CheckBoxList ID="cblGenre" runat="server" RepeatDirection="Horizontal"
-                                RepeatLayout="Flow" CssClass="cb" RepeatColumns="6">
-                                <asp:ListItem Value="1">Argumentation</asp:ListItem>
-                                <asp:ListItem Value="2">Narration</asp:ListItem>
-                                <asp:ListItem Value="3">Exposition</asp:ListItem>
-                                <asp:ListItem Value="4">Applied Writing</asp:ListItem>
-                            </asp:CheckBoxList>
-                        </fieldset>
-                        <fieldset>
-                            <legend>Topic</legend>
-                            <asp:CheckBoxList ID="cblTopic" runat="server" RepeatDirection="Horizontal"
-                                RepeatLayout="Flow" RepeatColumns="6" CssClass="cb">
-                                <asp:ListItem Value="1">Culture</asp:ListItem>
-                                <asp:ListItem Value="2">Science & Technology</asp:ListItem>
-                                <asp:ListItem Value="3">Humanity</asp:ListItem>
-                                <asp:ListItem Value="4">Society</asp:ListItem>
-                            </asp:CheckBoxList>
-                        </fieldset>
+                    <%-- 语料库检索div --%>
+                    <div id="divforQueryCorpus" runat="server">
+                        <div class="qfld" style="font-size: 14px;">
+                            Select Corpus you need according to:
+                        </div>
+                        <div class="qfld">
+                            <script type="text/javascript">
+                                function checkOrNot(cblId, val) {
+                                    for (var i = 0; i < document.getElementById(cblId).getElementsByTagName("input").length; i++) {
+                                        document.getElementById(cblId + "_" + i).checked = val.checked;
+                                    }
+                                }
+                            </script>
+                            <fieldset id="fdsLevel">
+                                <legend>Level
+                                <input id="cbforLevel" type="checkbox" onchange='checkOrNot("<%=cblLevel.ClientID%>", this)' />
+                                </legend>
+                                <asp:CheckBoxList ID="cblLevel" runat="server" RepeatDirection="Horizontal"
+                                    RepeatLayout="Flow" CssClass="cb" RepeatColumns="6">
+                                    <asp:ListItem Value="1">L1(freshmen)</asp:ListItem>
+                                    <asp:ListItem Value="2">L2(sophomores)</asp:ListItem>
+                                    <asp:ListItem Value="3">L3(juniors)</asp:ListItem>
+                                    <asp:ListItem Value="4">L4(seniors)</asp:ListItem>
+                                </asp:CheckBoxList>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Genre
+                                <input id="cbforGenre" type="checkbox" onchange='checkOrNot("<%=cblGenre.ClientID%>", this)' />
+                                </legend>
+                                <asp:CheckBoxList ID="cblGenre" runat="server" RepeatDirection="Horizontal"
+                                    RepeatLayout="Flow" CssClass="cb" RepeatColumns="6">
+                                    <asp:ListItem Value="1">Argumentation</asp:ListItem>
+                                    <asp:ListItem Value="2">Narration</asp:ListItem>
+                                    <asp:ListItem Value="3">Exposition</asp:ListItem>
+                                    <asp:ListItem Value="4">Applied Writing</asp:ListItem>
+                                </asp:CheckBoxList>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Topic
+                               <input id="cbforTopic" type="checkbox" onchange='checkOrNot("<%=cblTopic.ClientID%>", this)' />
+                                </legend>
+                                <asp:CheckBoxList ID="cblTopic" runat="server" RepeatDirection="Horizontal"
+                                    RepeatLayout="Flow" RepeatColumns="6" CssClass="cb">
+                                    <asp:ListItem Value="1">Culture</asp:ListItem>
+                                    <asp:ListItem Value="2">Science & Technology</asp:ListItem>
+                                    <asp:ListItem Value="3">Humanity</asp:ListItem>
+                                    <asp:ListItem Value="4">Society</asp:ListItem>
+                                </asp:CheckBoxList>
+                            </fieldset>
+                        </div>
+
+                        <div class="qfld" id="divNEUAC">
+                            <fieldset>
+                                <legend>Year
+                                    <input id="cbforYears" type="checkbox" onchange='checkOrNot("<%=cblYears.ClientID%>", this)' />
+                                </legend>
+                                <asp:CheckBoxList ID="cblYears" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" RepeatColumns="6" CssClass="cb">
+                                    <asp:ListItem Value="1">1</asp:ListItem>
+                                    <asp:ListItem Value="2">2</asp:ListItem>
+                                </asp:CheckBoxList>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Major
+                                    <input id="cbforMajors" type="checkbox" onchange='checkOrNot("<%=cblMajors.ClientID%>", this)' />
+                                </legend>
+                                <asp:CheckBoxList ID="cblMajors" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" RepeatColumns="6" CssClass="cb">
+                                    <asp:ListItem Value="1">1</asp:ListItem>
+                                    <asp:ListItem Value="2">2</asp:ListItem>
+                                </asp:CheckBoxList>
+                            </fieldset>
+                            <fieldset id="fldJournals" runat="server">
+                                <legend>Journal
+                                    <input id="cbforJournals" type="checkbox" onchange='checkOrNot("<%=cblJournals.ClientID%>", this)' style="margin-left:99%"/><label for="cbforJournals" style="font-weight:normal">Select All Journal</label>
+                                </legend>
+                                <asp:CheckBoxList ID="cblJournals" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow" RepeatColumns="6" CssClass="cb">
+                                    <asp:ListItem Value="1">1</asp:ListItem>
+                                    <asp:ListItem Value="2">2</asp:ListItem>
+                                </asp:CheckBoxList>
+                            </fieldset>                            
+                        </div>
+                        <div class="qfld" style="text-align: center; margin: 10px;">
+                            <asp:Button ID="btnSubmitforCorpus" runat="server" Text="Submit" CssClass="outbtndiv-button" />
+                        </div>
                     </div>
 
-                    <div class="qfld" style="text-align: center; margin-top: 10px;">
-                        <asp:Button ID="btnSubmitforCorpus" runat="server" Text="Submit"
-                            CssClass="outbtndiv-button" />&nbsp;&nbsp;
-									<asp:Button ID="btnResetforCorpus" runat="server" Text="Reset"
-                                        OnClientClick="Check_Uncheck_All()" CssClass="outbtndiv-button" />
-                    </div>
-
+                    <%-- 检索过后的语料库数据统计与分析 --%>
                     <div id="divforCorpusResult" runat="server" visible="false">
-
                         <div id="tab">
                             <h3 class="up" id="two1" onclick="setContentTab('two',1,3)">Summary by Level
                             </h3>
@@ -189,6 +314,7 @@
                             <div id="con_two_3">
                                 <asp:Table ID="tbforGenre" runat="server"></asp:Table>
                             </div>
+                            <asp:Button ID="btnBacktoQuery" runat="server" Text="Back to Query" OnClientClick="Uncheck_All()" Width="140px" class="outbtndiv-button"/>
                         </div>
 
                         <script type="text/javascript">
@@ -211,91 +337,134 @@
 
                 <%-- Concordance --%>
                 <asp:View ID="vwConcordance" runat="server">
-                    <div id="divConcordanceQuery" runat="server">
-                        <h4>Select Corpus you need according to:
-                        </h4>
-                        <div class="flexbox_div">
-                            Search for&nbsp;
-                            <input type="text" id="keyConcordance" size="55" placeholder="Type a query keyWord here">
-                        </div>
-
-                        <div class="flexbox_div">
-                            Search for matches&nbsp;
-                            <select id="sentencePos">                                
+                    <div id="divConcordanceQuery" runat="server" class="qfld">
+                        <fieldset>
+                            <legend>Select Corpus you need according to:</legend>
+                            <div class="flexbox_div">
+                                Search for&nbsp;
+                            <input type="text" id="keyConcordance" size="55" placeholder="Type a query keyWord here"  style="width:300px;height:20px;" class="input-text"/>
+                            </div>
+                            
+                            <div class="flexbox_div">
+                                Search for matches&nbsp;
+                            <select id="sentencePos">
                                 <option>at the start of</option>
                                 <option selected="true">anywhere in</option>
                                 <option>at the end of</option>
                             </select>&nbsp;
                             a sentence
-                        </div>
-                        <div class="flexbox_div">
-                            Display each match at&nbsp;
+                            </div>
+                            <div class="flexbox_div">
+                                Display each match at&nbsp;
                             <select id="matchPos">
                                 <option>start</option>
                                 <option selected="true">middle</option>
                                 <option>end</option>
                             </select>
-                            &nbsp;of a context of&nbsp;
-                            <a href="#" onclick='sub("chars",1,5)' class="flexbox_a"> - </a>
-                            <input type="text" id="chars" name="contextsize" size="4" value="10">
-                            <a href="#" onclick='add("chars",1,50)'  class="flexbox_a"> + </a>&nbsp;
-                            <select id="cSize"><option>characters</option><option selected="true">words</option><option>sentences</option></select>
-                        </div>
-                        <div class="flexbox_div">
-                            Display up to&nbsp;
-                            <a href="#" onclick='sub("terminate",10,10)' class="flexbox_a"> - </a>
-                            <input type="text" id="terminate" name="terminate" size="4" value="100">
-                             <a href="#" onclick='add("terminate",10,100)' class="flexbox_a"> + </a>
-                            &nbsp;matches with&nbsp;
-                            <a href="#" onclick='sub("rpp",5,10)' class="flexbox_a"> - </a>
-                            <input type="text" id="rpp" size="4" value="20" title="Type a new value or use the buttons to change the value.">                            
-                            <a href="#" onclick='add("rpp",5,50)' class="flexbox_a"> + </a>&nbsp;
+                                &nbsp;of a context of&nbsp;
+                            <a href="#" onclick='sub("<%=chars.ClientID%>",1,5)' class="flexbox_asub">-</a>
+                                <input type="text" id="chars" name="contextsize" size="4" value="10" runat="server" class="flexbox_text" />
+                                <a href="#" onclick='add("<%=chars.ClientID%>",1,50)' class="flexbox_a">+</a>&nbsp;
+                            <asp:DropDownList ID="ddlCharacters" runat="server">
+                                <asp:ListItem Enabled="False" Value="0">characters</asp:ListItem>
+                                <asp:ListItem Selected="True" Value="1">words</asp:ListItem>
+                                <asp:ListItem Enabled="False" Value="2">sentences</asp:ListItem>
+                            </asp:DropDownList>
+                            </div>
+                            <div class="flexbox_div">
+                                Display up to&nbsp;
+                            <a href="#" onclick='sub("terminate",10,10)' class="flexbox_asub">-</a>
+                                <input type="text" id="terminate" name="terminate" size="4" value="100" class="flexbox_text" />
+                                <a href="#" onclick='add("terminate",10,100)' class="flexbox_a">+</a>
+                                &nbsp;matches with&nbsp;
+                            <a href="#" onclick='sub("rpp",5,10)' class="flexbox_asub">-</a>
+                                <input type="text" id="rpp" size="4" value="20" title="Type a new value or click the - + buttons to change the value." class="flexbox_text" />
+                                <a href="#" onclick='add("rpp",5,50)' class="flexbox_a">+</a>&nbsp;
                             per page
-                        </div>
-                        <div class="flexbox_div">
-                            <input type="checkbox" id="count">
-                            <label for="count">Show total number of matches </label>
-                        </div>
-                        <div class="flexbox_div">
-                            <input type="button" id="submitConc" value="Search">
-                        </div>
-                       
+                            </div>
+                            <div class="flexbox_div">
+                                <input type="checkbox" id="count" />
+                                <label for="count">Show total number of matches </label>
+                            </div>
+                            <div class="flexbox_div">
+                                <input type="button" id="submitConc" value="Search" class="outbtndiv-button" />
+                            </div>
+                        </fieldset>
                     </div>
                     <div id="divConcordanceResult" runat="server">
-
+                        <asp:GridView ID="gvConcordance" runat="server" AutoGenerateColumns="False" CellPadding="2" ForeColor="#333333" GridLines="None" DataKeyNames="CorpusID" Width="100%" AllowPaging="True" PageSize="10" PagerSettings-Mode="NumericFirstLast">
+                                <AlternatingRowStyle BackColor="White" />
+                                <Columns>
+                                    <asp:TemplateField HeaderText="Title">
+                                        <ItemTemplate>
+                                            <div style="padding: 2px">
+                                                <asp:Label ID="lbTitle" runat="server" Text='<%# Bind("Title")%>'></asp:Label>
+                                            </div>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Left">
+                                        <ItemTemplate>
+                                            <div style="padding: 2px">
+                                                <asp:Label ID="lbText" runat="server" Text='<%# Bind("OriginalText")%>'></asp:Label>
+                                            </div>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Left">
+                                        <ItemTemplate>
+                                            <div style="padding: 2px">
+                                                <asp:Label ID="lbText" runat="server" Text='<%# Bind("OriginalText")%>'></asp:Label>
+                                            </div>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                </Columns>
+                                <EditRowStyle BackColor="#2461BF" />
+                                <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                                <RowStyle BackColor="#EFF3FB" />
+                                <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                                <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                                <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                                <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                        </asp:GridView>
                     </div>
                 </asp:View>
 
                 <%-- Collocate --%>
                 <asp:View ID="vwCollocate" runat="server">
-                    <div id="divCollocateQuery" runat="server">
-                        <div class="flexbox_div">
-                            Search for collocates of&nbsp;
-                            <input type="text" id="collocq" size="60" placeholder="Type a query KeyWord here">
-                        </div>
-                        <div class="flexbox_div">
-                            Display collocates found up to &nbsp;
-                            <a href="#" onclick='sub("clField",1,0)' class="flexbox_a"> - </a>
-                            <input type="text" id="clField" size="3" value="0">
-                            <a href="#" onclick='add("clField",1,3)' class="flexbox_a"> + </a>
-                            &nbsp;word(s) to the left and&nbsp;
-                            <a href="#" onclick='sub("crField",1,0)' class="flexbox_a"> - </a>
-                            <input type="text" id="crField" size="3" value="1">
-                            <a href="#" onclick='add("crField",1,3)' class="flexbox_a"> + </a>
-                            &nbsp;word(s) to the right&nbsp;
-                        </div>
-                        <div class="flexbox_div" style="display:none">
-                            Collocate Part of Speech:&nbsp;
-                            <input type="button" id="PosButton" class="shortbutton it-peb" value="PoS Editor">	
-                        </div>
-                        <div class="flexbox_div">
-                            <input type="button" id="submitColloc" value="Search" class="shortbutton">
-                        </div>
+                    <div id="divCollocateQuery" runat="server" class="qfld">
+                        <fieldset>
+                            <legend>Select Corpus you need according to:</legend>
+                            <div class="flexbox_div">
+                                Search for collocates of&nbsp;
+                            <input type="text" id="collocq" size="60" placeholder="Type a query KeyWord here" />
+                            </div>
+                            <div class="flexbox_div">
+                                Display collocates found up to &nbsp;
+                            <a href="#" onclick='sub("clField",1,0)' class="flexbox_asub">-</a>
+                                <input type="text" id="clField" size="3" value="0" class="flexbox_text" />
+                                <a href="#" onclick='add("clField",1,3)' class="flexbox_a">+</a>
+                                &nbsp;word(s) to the left and&nbsp;
+                            <a href="#" onclick='sub("crField",1,0)' class="flexbox_asub">-</a>
+                                <input type="text" id="crField" size="3" value="1" class="flexbox_text" />
+                                <a href="#" onclick='add("crField",1,3)' class="flexbox_a">+</a>
+                                &nbsp;word(s) to the right&nbsp;
+                            </div>
+                            <div class="flexbox_div" style="display: none">
+                                Collocate Part of Speech:&nbsp;
+                            <input type="button" id="PosButton" class="shortbutton it-peb" value="PoS Editor" />
+                            </div>
+                            <div class="flexbox_div">
+                                <input type="button" id="submitColloc" value="Search" class="shortbutton" />
+                            </div>
+                        </fieldset>
                     </div>
                     <div id="divCollocateResult" runat="server">
 
                     </div>
                 </asp:View>
+
 
                 <%-- WordList --%>
                 <asp:View ID="vwWordList" runat="server">

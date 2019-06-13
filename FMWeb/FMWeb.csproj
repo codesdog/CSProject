@@ -50,6 +50,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -138,6 +139,18 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="images\l8.gif" />
+    <Content Include="images\l7.gif" />
+    <Content Include="images\l6.gif" />
+    <Content Include="images\l5.gif" />
+    <Content Include="images\l1.gif" />
+    <Content Include="images\l2.gif" />
+    <Content Include="images\l3.gif" />
+    <Content Include="images\l4.gif" />
+    <Content Include="images\ld.gif" />
+    <Content Include="images\loading.gif" />
+    <Content Include="images\loading %282%29.gif" />
+    <Content Include="images\loading1.gif" />
     <Content Include="jquery-ui-1.8.11.custom.css" />
     <Content Include="css\jquery-ui.css" />
     <Content Include="js\bootstrap.min.js" />

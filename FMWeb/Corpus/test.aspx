@@ -47,7 +47,13 @@
     </script>
     <asp:TextBox ID="tb1" runat="server" Text="123456.76" onkeydown="return numTxt_KeyDown(event,this,5,10,10000000);" />
     <asp:Button ID="btn" runat="server" Text="提交" />
+    <asp:Button ID="btnUrl" runat="server" Text="Url" />
     <asp:Label ID="lbtxt" runat="server" Text=""></asp:Label>
+    <br />
+    <asp:TextBox ID="tb2" runat="server"></asp:TextBox>
+    <asp:Button ID="btn2" runat="server" Text="检索" />
+    <asp:GridView ID="gv2" runat="server"></asp:GridView>
+
     <script src="http://www.webdm.cn/themes/script/jquery.js"></script>
 
     <style>

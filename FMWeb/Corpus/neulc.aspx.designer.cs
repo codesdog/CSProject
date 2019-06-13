@@ -40,6 +40,15 @@ namespace FMWeb.Corpus {
         protected global::System.Web.UI.WebControls.View vwQuery;
         
         /// <summary>
+        /// divforQueryCorpus 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divforQueryCorpus;
+        
+        /// <summary>
         /// cblLevel 控件。
         /// </summary>
         /// <remarks>
@@ -67,6 +76,42 @@ namespace FMWeb.Corpus {
         protected global::System.Web.UI.WebControls.CheckBoxList cblTopic;
         
         /// <summary>
+        /// cblYears 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBoxList cblYears;
+        
+        /// <summary>
+        /// cblMajors 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBoxList cblMajors;
+        
+        /// <summary>
+        /// fldJournals 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl fldJournals;
+        
+        /// <summary>
+        /// cblJournals 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBoxList cblJournals;
+        
+        /// <summary>
         /// btnSubmitforCorpus 控件。
         /// </summary>
         /// <remarks>
@@ -74,15 +119,6 @@ namespace FMWeb.Corpus {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSubmitforCorpus;
-        
-        /// <summary>
-        /// btnResetforCorpus 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnResetforCorpus;
         
         /// <summary>
         /// divforCorpusResult 控件。
@@ -121,6 +157,15 @@ namespace FMWeb.Corpus {
         protected global::System.Web.UI.WebControls.Table tbforGenre;
         
         /// <summary>
+        /// btnBacktoQuery 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnBacktoQuery;
+        
+        /// <summary>
         /// vwConcordance 控件。
         /// </summary>
         /// <remarks>
@@ -139,6 +184,24 @@ namespace FMWeb.Corpus {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divConcordanceQuery;
         
         /// <summary>
+        /// chars 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText chars;
+        
+        /// <summary>
+        /// ddlCharacters 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlCharacters;
+        
+        /// <summary>
         /// divConcordanceResult 控件。
         /// </summary>
         /// <remarks>
@@ -146,6 +209,15 @@ namespace FMWeb.Corpus {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divConcordanceResult;
+        
+        /// <summary>
+        /// gvConcordance 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvConcordance;
         
         /// <summary>
         /// vwCollocate 控件。
