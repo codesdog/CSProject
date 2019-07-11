@@ -38,6 +38,7 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.btnViewChart = new System.Windows.Forms.Button();
             this.btnChart2 = new System.Windows.Forms.Button();
+            this.btnCluster = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResult)).BeginInit();
             this.SuspendLayout();
             // 
@@ -134,11 +135,22 @@
             this.btnChart2.UseVisualStyleBackColor = true;
             this.btnChart2.Click += new System.EventHandler(this.BtnChart2_Click);
             // 
+            // btnCluster
+            // 
+            this.btnCluster.Location = new System.Drawing.Point(509, 573);
+            this.btnCluster.Name = "btnCluster";
+            this.btnCluster.Size = new System.Drawing.Size(75, 23);
+            this.btnCluster.TabIndex = 9;
+            this.btnCluster.Text = "Cluster";
+            this.btnCluster.UseVisualStyleBackColor = true;
+            this.btnCluster.Click += new System.EventHandler(this.BtnCluster_Click);
+            // 
             // FmMaim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 608);
+            this.Controls.Add(this.btnCluster);
             this.Controls.Add(this.btnChart2);
             this.Controls.Add(this.btnViewChart);
             this.Controls.Add(this.btnAnalysis);
@@ -168,5 +180,6 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button btnViewChart;
         private System.Windows.Forms.Button btnChart2;
+        private System.Windows.Forms.Button btnCluster;
     }
 }

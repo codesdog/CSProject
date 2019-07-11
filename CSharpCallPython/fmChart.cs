@@ -15,7 +15,6 @@ namespace CSharpCallPython
         private double dm = 0;
         private double vm = 0;         //速度
 
-        private double ss, st = 0;        //时间间隔
         private List<double> VM = new List<double>(100);
         private List<double> DM = new List<double>(100);
         private Queue<double> Vm = new Queue<double>(100);

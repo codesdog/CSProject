@@ -53,7 +53,10 @@ function cancel_shield() {
     <div id="divLoadingBG" runat="server" class="divLoadingBG" style="display:none;"></div>
     <div id="divLoading" runat="server" class="divLoading" style="display:none;">	
 	   
-	    <img src="images/l8.gif"  />
+	    <img src="images/l12.gif"  />
     </div>
     <asp:Label ID="lbErr" runat="server" Text=""></asp:Label>
+    <asp:GridView ID="GridView1" runat="server" AllowPaging="true">
+        <PagerStyle Font-Bold="False" Font-Size="Medium" Font-Underline="True" HorizontalAlign="Center" VerticalAlign="Middle" Width="20px" />
+    </asp:GridView>
 </asp:Content>

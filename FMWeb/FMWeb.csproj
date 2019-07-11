@@ -139,6 +139,10 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="images\5.gif" />
+    <Content Include="images\l10.gif" />
+    <Content Include="images\l11.gif" />
+    <Content Include="images\l12.gif" />
     <Content Include="images\l8.gif" />
     <Content Include="images\l7.gif" />
     <Content Include="images\l6.gif" />
@@ -147,6 +151,7 @@
     <Content Include="images\l2.gif" />
     <Content Include="images\l3.gif" />
     <Content Include="images\l4.gif" />
+    <Content Include="images\l9.gif" />
     <Content Include="images\ld.gif" />
     <Content Include="images\loading.gif" />
     <Content Include="images\loading %282%29.gif" />
@@ -158,6 +163,7 @@
     <Content Include="js\jquery-ui.min.js" />
     <Content Include="js\jquery.multi-select.js" />
     <Content Include="js\ySelect.js" />
+    <Content Include="mall1.aspx" />
     <Content Include="MS001.aspx" />
     <Content Include="OfficePreview.aspx" />
     <Content Include="pure-css3-rounded-button\index.html" />
@@ -193,6 +199,7 @@
     <Content Include="T1.aspx" />
     <Content Include="T2.aspx" />
     <Content Include="T3.aspx" />
+    <Content Include="TestP.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -246,6 +253,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="mall1.aspx.cs">
+      <DependentUpon>mall1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mall1.aspx.designer.cs">
+      <DependentUpon>mall1.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MS001.aspx.cs">
       <DependentUpon>MS001.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -295,6 +309,13 @@
     </Compile>
     <Compile Include="T3.aspx.designer.cs">
       <DependentUpon>T3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestP.aspx.cs">
+      <DependentUpon>TestP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestP.aspx.designer.cs">
+      <DependentUpon>TestP.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

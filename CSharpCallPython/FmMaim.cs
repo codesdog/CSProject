@@ -300,5 +300,11 @@ namespace CSharpCallPython
             fmChart2 fm1 = new fmChart2();
             fm1.Show();
         }
+
+        private void BtnCluster_Click(object sender, EventArgs e)
+        {
+            frmCluster fm1 = new frmCluster();
+            fm1.Show();
+        }
     }
 }

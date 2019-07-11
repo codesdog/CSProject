@@ -10,51 +10,60 @@
 namespace FMWeb {
     
     
-    public partial class Contact {
+    public partial class TestP {
         
         /// <summary>
-        /// btnSubmit 控件。
+        /// tb1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSubmit;
+        protected global::System.Web.UI.WebControls.TextBox tb1;
         
         /// <summary>
-        /// divLoadingBG 控件。
+        /// btnCluster 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divLoadingBG;
+        protected global::System.Web.UI.WebControls.Button btnCluster;
         
         /// <summary>
-        /// divLoading 控件。
+        /// lbT1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divLoading;
+        protected global::System.Web.UI.WebControls.Label lbT1;
         
         /// <summary>
-        /// lbErr 控件。
+        /// lbT2 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbErr;
+        protected global::System.Web.UI.WebControls.Label lbT2;
         
         /// <summary>
-        /// GridView1 控件。
+        /// lbT3 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.Label lbT3;
+        
+        /// <summary>
+        /// gv1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gv1;
     }
 }
